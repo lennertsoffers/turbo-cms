@@ -1,5 +1,7 @@
 # @turbo-cms/author
 
+![Turbo CMS Preview](./turbo-cms-preview.gif)
+
 ## What is this project?
 
 This project is an extension layer built on top of *Payload CMS* that introduces a powerful, flexible drag-and-drop page editor. It’s designed to make building and managing websites faster for developers while remaining intuitive for content editors.
