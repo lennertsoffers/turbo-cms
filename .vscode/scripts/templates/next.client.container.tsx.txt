@@ -1,0 +1,9 @@
+"use client";
+
+import { {{Component}}Component } from "./{{component}}.component";
+
+type {{Component}}Props = {};
+
+export const {{Component}} = ({}: {{Component}}Props) => {
+    return <{{Component}}Component />;
+};

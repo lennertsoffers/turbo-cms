@@ -1,0 +1,8 @@
+@use "@/styles/style-guide/icon/icon";
+
+.form-field {
+    &__icon {
+        width: icon.$icon-width--m;
+        height: icon.$icon-height--m;
+    }
+}

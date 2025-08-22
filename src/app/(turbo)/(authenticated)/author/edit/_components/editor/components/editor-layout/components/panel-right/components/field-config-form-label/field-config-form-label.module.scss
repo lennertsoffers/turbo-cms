@@ -1,0 +1,19 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/text/text";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.field-config-form-label {
+    font-size: small;
+    margin-bottom: spacing.$spacing-1;
+
+    @include text.capitalize-first-letter();
+
+    &--section {
+        font-weight: bold;
+        margin-bottom: spacing.$spacing-2;
+    }
+
+    &--title {
+        font-size: medium;
+        margin-bottom: spacing.$spacing-3;
+    }
+}

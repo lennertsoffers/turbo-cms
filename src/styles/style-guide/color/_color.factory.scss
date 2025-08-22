@@ -1,0 +1,15 @@
+@use "schemes/light.scheme";
+@use "schemes/dark.scheme";
+@use "schemes/global.scheme";
+
+:root {
+    @include global.scheme-global();
+    @include light.scheme-light();
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include global.scheme-global();
+        @include dark.scheme-dark();
+    }
+}

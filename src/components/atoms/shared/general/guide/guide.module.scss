@@ -1,0 +1,9 @@
+.guide {
+    opacity: 1 !important;
+    height: 100%;
+    position: absolute;
+    width: 3px;
+    top: 0;
+    background-color: var(--color__gray--light);
+    z-index: -2;
+}

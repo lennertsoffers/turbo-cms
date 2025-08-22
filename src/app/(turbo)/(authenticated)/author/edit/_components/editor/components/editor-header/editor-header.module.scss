@@ -1,0 +1,35 @@
+@use "../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.editor-header {
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid var(--color__gray--normal);
+    @include flex.flex(spacing.$spacing-0, row, spacing.$spacing-2, spacing.$spacing-2);
+
+    &__controls {
+        @include flex.flex-item(fill, hug);
+        @include flex.flex(spacing.$spacing-3, row);
+
+        &__group {
+            @include flex.flex(spacing.$spacing-0, row);
+        }
+    }
+
+    &__path {
+        h1 {
+            white-space:nowrap;
+        }
+    }
+
+    &__actions {
+        justify-content: flex-end;
+
+        @include flex.flex-item(fill, hug);
+        @include flex.flex(spacing.$spacing-3, row);
+
+        ul {
+            list-style-type: none;
+        }
+    }
+}

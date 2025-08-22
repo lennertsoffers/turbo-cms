@@ -1,0 +1,10 @@
+@use "@/styles/style-guide/variables/spacing/spacing.variables";
+@use "@/styles/style-guide/flex/flex.mixins";
+
+.account {
+    @include flex.flex(spacing.$spacing-3, column);
+
+    &__separator {
+        padding: 0 spacing.$spacing-2;
+    }
+}

@@ -1,0 +1,12 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.panel-content-toggle {
+    width: 100%;
+
+    @include flex.flex(spacing.$spacing-1, row);
+
+    > label {
+        @include flex.flex-item(fill, fill);
+    }
+}

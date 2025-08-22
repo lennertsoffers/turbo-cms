@@ -1,0 +1,40 @@
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/variables/radius/radius";
+
+.form-field-page-path {
+    &__autocomplete {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        border: 1px solid var(--color__gray--normal);
+        border-radius: radius.$radius-2;
+        margin-top: spacing.$spacing-2;
+        overflow: hidden;
+
+        @include flex.flex(spacing.$spacing-0, column);
+    }
+
+    &__suggestion {
+        padding: spacing.$spacing-2;
+        height: 40px;
+
+        &:hover {
+            background-color: var(--color__gray--light);
+        }
+
+        &--active {
+            background-color: var(--color__gray--light);
+        }
+    }
+
+    &__skeleton {
+        & > span {
+            display: block;
+            height: 100%;
+            width: 200px;
+            border-radius: radius.$radius-1;
+            background-color: var(--color__gray--normal) !important;
+        }
+    }
+}

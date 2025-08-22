@@ -1,0 +1,33 @@
+@use "@/styles/style-guide/variables/radius/radius";
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/variables/font/font";
+@use "@/styles/style-guide/text/text";
+@use "@/styles/style-guide/flex/flex";
+
+.menu-tile {
+    height: 150px;
+    background-color: transparent;
+    border: 1px solid var(--color__gray--light);
+    border-radius: radius.$radius-3;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 100ms ease-in-out;
+
+    @include flex.flex(spacing.$spacing-3, column, spacing.$spacing-3, spacing.$spacing-3);
+
+    &:hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    &__title {
+        font-size: font.$font-h3;
+        font-weight: 700;
+
+        @include text.capitalize-first-letter();
+    }
+
+    &__description {
+        @include text.capitalize-first-letter();
+    }
+}

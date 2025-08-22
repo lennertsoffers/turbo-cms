@@ -1,0 +1,13 @@
+@use "@/styles/style-guide/variables/font/font";
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.field-errors {
+    display: block;
+
+    &__error {
+        color: var(--color__danger);
+        font-size: font.$font-sm;
+        display: block;
+        margin-top: spacing.$spacing-1;
+    }
+}

@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/icon/icon";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.field-config-form-spacer {
+    padding: spacing.$spacing-2;
+    min-width: icon.$icon-height--m  + spacing.$spacing-2 + spacing.$spacing-2;
+}

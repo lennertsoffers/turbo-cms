@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/text/text";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.number-variable-row {
+    @include flex.flex(spacing.$spacing-2, row);
+
+    &__item {
+        @include flex.flex-item(fill, hug);
+    }
+}

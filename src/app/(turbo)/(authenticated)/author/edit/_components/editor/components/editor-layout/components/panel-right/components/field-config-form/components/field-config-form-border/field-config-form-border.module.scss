@@ -1,0 +1,15 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.field-config-form-border {
+    align-items: start;
+    @include flex.flex(spacing.$spacing-2, row);
+
+    &__inputs {
+        @include flex.flex-item(fill, hug);
+
+        > span + span {
+            margin-top: spacing.$spacing-2;
+        }
+    }
+}

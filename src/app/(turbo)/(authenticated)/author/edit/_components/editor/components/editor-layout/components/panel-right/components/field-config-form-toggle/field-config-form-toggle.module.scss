@@ -1,0 +1,32 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/icon/icon";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/text/text";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/radius/radius";
+
+.field-config-form-toggle {
+    background-color: transparent;
+    border: none;
+    padding: spacing.$spacing-2;
+    min-height: icon.$icon-height--m + spacing.$spacing-2 + spacing.$spacing-2;
+    max-height: icon.$icon-height--m + spacing.$spacing-2 + spacing.$spacing-2;
+
+    &__icon {
+        min-height: icon.$icon-height--m;
+        min-width: icon.$icon-width--m;
+    }
+
+    &__tooltip {
+        background-color: var(--color__primary);
+        color: var(--color__primary--text);
+        padding: spacing.$spacing-1 spacing.$spacing-2;
+        border-radius: radius.$radius-2;
+        font-size: smaller;
+
+        @include text.capitalize-first-letter();
+
+        &__arrow {
+            fill: var(--color__primary);
+        }
+    }
+}

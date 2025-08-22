@@ -1,0 +1,49 @@
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/variables/radius/radius";
+@use "@/styles/style-guide/text/text";
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/components/general/button/button";
+
+.radio-field {
+    border: 1px solid var(--color__gray--light);
+    width: fit-content;
+    border-radius: radius.$radius-2;
+    cursor: pointer;
+    
+    @include flex.flex(spacing.$spacing-1, row);
+
+    &__label {
+        height: button.$button__height;
+        border-radius: radius.$radius-2;
+
+        & > span {
+            display: block;
+            height: button.$button__height;
+            border: none;
+            border-radius: radius.$radius-2;
+            font-weight: bold;
+            cursor: pointer !important;
+            text-align: left;
+
+            @include flex.flex(spacing.$spacing-2, row, spacing.$spacing-2, spacing.$spacing-2);
+
+            * {
+                @include text.capitalize-first-letter();
+            }
+
+            & > svg {
+                display: block;
+            }
+        }
+
+        &:has(input:checked) {
+            background-color: var(--color__primary);
+            color: var(--color__primary--text);
+        }
+    }
+
+    &__input {
+        appearance: none;
+        position: absolute;
+    }
+}

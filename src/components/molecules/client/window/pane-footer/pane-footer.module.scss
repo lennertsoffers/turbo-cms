@@ -1,0 +1,12 @@
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.pane-footer {
+    @include flex.flex(0, row, spacing.$spacing-3, spacing.$spacing-0);
+    justify-content: flex-end;
+
+    &__group {
+        @include flex.flex(spacing.$spacing-3, row);
+        list-style-type: none;
+    }
+}

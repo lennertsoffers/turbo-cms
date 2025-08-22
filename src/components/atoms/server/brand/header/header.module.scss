@@ -1,0 +1,31 @@
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/text/text";
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/variables/font/font";
+@use "@/styles/components/navigation/header/header";
+
+.header {
+    min-height: header.$header__height;
+    max-height: header.$header__height;
+
+    @include flex.flex(spacing.$spacing-2, column);
+
+    &__title {
+        font-size: font.$font-h1;
+        @include text.capitalize-first-letter();
+    }
+
+    &__greeting {
+        font-size: font.$font-lg;
+        color: var(--color__gray--dark);
+
+        @include text.capitalize-first-letter();
+    
+        &__name {
+            font-size: font.$font-lg;
+            display: inline-block;
+
+            @include text.capitalize-first-letter();
+        }
+    }
+}

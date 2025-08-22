@@ -1,0 +1,8 @@
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.page-menu-pane {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+    gap: spacing.$spacing-3;
+}

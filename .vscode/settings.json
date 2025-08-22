@@ -1,0 +1,19 @@
+{
+    "editor.formatOnSave": false,
+    "eslint.enable": true,
+    "eslint.codeActionsOnSave.mode": "all",
+    "eslint.format.enable": true,
+    "eslint.useFlatConfig": true,
+    "eslint.run": "onType",
+    "eslint.validate": ["typescript", "typescriptreact"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.fixAll.eslint": "always"
+    },    
+    "path-autocomplete.pathMappings": {
+        "@": "${workspace}/src"
+    },
+    "alias-tool.mappings": {
+        "@": "${workspace}/src"
+    },
+}

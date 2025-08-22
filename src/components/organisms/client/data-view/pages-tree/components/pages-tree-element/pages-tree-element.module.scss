@@ -1,0 +1,8 @@
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.pages-tree-element {
+    margin: spacing.$spacing-1 0;
+
+    @include flex.flex(spacing.$spacing-2, row);
+}

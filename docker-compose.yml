@@ -1,0 +1,11 @@
+services:
+  nextjs:
+    image: oven/bun
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: ["sh", "-c", "bun install && bun run dev"]
+    environment:
+      - NODE_ENV=development

@@ -1,0 +1,31 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/icon/icon";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/radius/radius";
+
+.component {
+    border: 1px solid var(--color__gray--normal);
+    border-radius: radius.$radius-2;
+    align-items: center;
+    cursor: grab;
+
+    @include flex.flex(spacing.$spacing-2, row, spacing.$spacing-2, spacing.$spacing-2);
+
+    &__icon {
+        display: block;
+        justify-content: center;
+
+        @include flex.flex(spacing.$spacing-0, column);
+        @include icon.icon-dimensions-s;
+
+        > svg {
+            @include icon.icon-dimensions-s;
+        }
+    }
+
+    &__handle {
+        text-align: right;
+
+        @include flex.flex-item(fill, hug);
+    }
+}

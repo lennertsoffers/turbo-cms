@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.field-config-form-appearance {
+    @include flex.flex(spacing.$spacing-1, column);
+}

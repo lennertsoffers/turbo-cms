@@ -1,0 +1,9 @@
+"use client";
+
+import styles from "./{{component}}.module.scss";
+
+type {{Component}}ComponentProps = {};
+
+export const {{Component}}Component = ({}: {{Component}}ComponentProps) => {
+    return <div></div>;
+};

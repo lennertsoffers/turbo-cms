@@ -1,0 +1,104 @@
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/variables/radius/radius";
+
+@use "sass:color";
+
+.media-creator {
+    &__fieldset {
+        border: none;
+
+        &__image {
+            margin-bottom: spacing.$spacing-4;
+
+            &__upload {
+                border-radius: radius.$radius-2;
+                overflow: hidden;
+                position: relative;
+                aspect-ratio: 7/4;
+                width: 350px;
+
+                &__preview {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &__label {
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    padding: spacing.$spacing-2;
+                    @include flex.flex(spacing.$spacing-2, column);
+
+                    & > span {
+                        display: block;
+                    }
+
+                    &__browse-files {
+                        padding: spacing.$spacing-1;
+                        border: 1px solid var(--color__gray--normal);
+                        border-radius: radius.$radius-1;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        border-radius: radius.$radius-2;
+                        outline-offset: -1px;
+                        outline: 1px dashed var(--color__gray--normal);
+                    }
+
+                    // TODO - Remove unused styles
+                    &--file-over {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0.1;
+                            border-radius: radius.$radius-2;
+                            outline-offset: -3px;
+                            outline: 3px solid var(--color__green);
+                            background-color: var(--color__green);
+                        }
+                    }
+                }
+
+                &__input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+
+            &__actions {
+                align-items: flex-start;
+                @include flex.flex(spacing.$spacing-3, column);
+
+                &__input {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__meta {
+            @include flex.flex(spacing.$spacing-3, column);
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use "@/styles/style-guide/icon/icon";
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/text/text";
+@use "@/styles/style-guide/variables/radius/radius";
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.form-field-media {
+    &__label {
+        font-weight: bold;
+        margin-bottom: spacing.$spacing-1;
+        @include text.capitalize-first-letter();
+    }
+
+    &__preview {
+        cursor: pointer;
+        @include flex.flex(spacing.$spacing-0, column);
+
+        &--icon {
+            img {
+                border-radius: radius.$radius-1;
+                border: 1px solid var(--color__gray--light);
+                height: icon.$icon-height--l + spacing.$spacing-1;
+                width: icon.$icon-width--l + spacing.$spacing-1;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        &--thumbnail {
+            border-radius: radius.$radius-2;
+            overflow: hidden;
+            width: 300px;
+            border: 1px solid var(--color__gray--light);
+
+            img {
+                aspect-ratio: 4/3;
+            }
+
+            span {
+                display: block;
+                padding: spacing.$spacing-2;
+            }
+        }
+    }
+}

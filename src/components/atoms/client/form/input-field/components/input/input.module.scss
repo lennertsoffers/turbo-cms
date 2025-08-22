@@ -1,0 +1,11 @@
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.input {
+    border: none;
+    background-color: transparent;
+    padding: spacing.$spacing-2;
+    outline: none;
+
+    @include flex.flex-item(fill, hug);
+}

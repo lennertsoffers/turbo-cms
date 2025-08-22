@@ -1,0 +1,9 @@
+"use server";
+
+import { {{Component}}Component } from "./{{component}}.component";
+
+type {{Component}}Props = {};
+
+export const {{Component}} = async ({}: {{Component}}Props) => {
+    return <{{Component}}Component />;
+};

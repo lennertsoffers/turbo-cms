@@ -1,0 +1,16 @@
+@use "../../variables/color/dark/dark.variables";
+
+@mixin scheme-dark() {
+    --color: #{dark.$color__dark};
+    --color--text: #{dark.$color__dark--text};
+
+    --color__primary: #{dark.$color__dark__primary};
+    --color__primary--text: #{dark.$color__dark__primary--text};
+
+    --color__danger: #{dark.$color__dark__danger};
+    --color__danger--text: #{dark.$color__dark__danger--text};
+
+    --color__gray--dark: #{dark.$color__dark__gray--dark};
+    --color__gray--normal: #{dark.$color__dark__gray--normal};
+    --color__gray--light: #{dark.$color__dark__gray--light};
+}

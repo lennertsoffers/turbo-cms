@@ -1,0 +1,28 @@
+@use "./icon.variables" as *;
+
+@mixin icon-dimensions-s {
+    width: $icon-width--s;
+    height: $icon-height--s;
+}
+
+@mixin icon-dimensions-m {
+    width: $icon-width--m;
+    height: $icon-height--m;
+}
+
+@mixin icon-dimensions-l {
+    width: $icon-width--l;
+    height: $icon-height--l;
+}
+
+@mixin icon-container-dimensions-s {
+    height: $icon-height--s;
+}
+
+@mixin icon-container-dimensions-m {
+    height: $icon-height--m;
+}
+
+@mixin icon-container-dimensions-l {
+    height: $icon-height--l;
+}

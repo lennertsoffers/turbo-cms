@@ -1,0 +1,8 @@
+.separator {
+    display: block;
+
+    &__line {
+        stroke: var(--color__gray--normal);
+        stroke-width: 2;
+    }
+}

@@ -1,0 +1,104 @@
+.author-renderer {
+    &__wrapper {
+        user-select: none;
+
+        &--hovered {
+            position: relative;
+
+            &::before {
+                content: "";
+                outline-offset: -3px;
+                outline: 3px solid var(--color__green--light);
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            &::after {
+                content: "";
+                background-color: var(--color__green);
+                opacity: 0.2;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 1;
+            }
+        }
+
+        &--hovered-parent {
+            position: relative;
+
+            &::after {
+                content: "";
+                outline-offset: -1px;
+                outline: 1px dashed var(--color__green);
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 1;
+            }
+        }
+
+        &--selected {
+            position: relative;
+
+            &::before {
+                content: "";
+                outline-offset: -3px;
+                outline: 3px solid var(--color__green);
+                opacity: 1;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 3;
+            }
+        }
+
+        &--active {
+            opacity: 0.3;
+        }
+
+        &--over {
+            position: relative;
+
+            &::before {
+                content: "";
+                outline-offset: -2px;
+                outline: 2px dashed var(--color__green);
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            &::after {
+                content: "";
+                background-color: var(--color__green);
+                opacity: 0.2;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 1;
+            }
+        }
+    }
+}

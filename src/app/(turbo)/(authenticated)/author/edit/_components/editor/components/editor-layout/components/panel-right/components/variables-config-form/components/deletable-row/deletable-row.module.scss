@@ -1,0 +1,46 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/text/text";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/icon/icon";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/radius/radius";
+
+.deletable-row {
+    &__content {
+        border-radius: radius.$radius-2;
+
+        &[data-state="open"] {
+            background-color: var(--color__gray--light);
+        }
+    }
+
+    &__dropdown {
+        background-color: var(--color__primary);
+        color: var(--color__primary--text);
+        border-radius: radius.$radius-2;
+
+        @include flex.flex(spacing.$spacing-0, column, spacing.$spacing-2, spacing.$spacing-2);
+
+        &__item {
+            border-radius: radius.$radius-1;
+            outline: none;
+            align-items: center;
+            display: block;
+            cursor: pointer;
+
+            @include flex.flex(spacing.$spacing-1, row, spacing.$spacing-1, spacing.$spacing-1);
+
+            &[data-highlighted] {
+                background-color: var(--color__red);
+            }
+
+            &__icon {
+                max-height: icon.$icon-height--s;
+                max-width: icon.$icon-width--s;
+            }
+
+            & > span {
+                @include text.capitalize-first-letter();
+            }
+        }
+    }
+}

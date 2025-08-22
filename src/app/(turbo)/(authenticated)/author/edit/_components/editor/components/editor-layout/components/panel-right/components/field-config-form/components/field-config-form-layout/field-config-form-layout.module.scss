@@ -1,0 +1,35 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/icon/icon";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/radius/radius";
+
+.field-config-form-layout {
+    @include flex.flex(spacing.$spacing-1, column);
+
+    &__alignment {
+        @include flex.flex(spacing.$spacing-2, row);
+
+        &--left {
+            @include flex.flex-item(fill, hug);
+            @include flex.flex(spacing.$spacing-1, column);
+        }
+
+        &--right {
+            @include flex.flex-item(fill, fill);
+        }
+
+        &__direction {
+            p {
+                width: 100%;
+
+                label {
+                    @include flex.flex-item(fill, hug);
+
+                    span {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

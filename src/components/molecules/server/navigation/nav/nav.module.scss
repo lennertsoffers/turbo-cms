@@ -1,0 +1,15 @@
+@use "@/styles/style-guide/variables/spacing/spacing.variables";
+@use "@/styles/style-guide/variables/radius/radius.variables";
+@use "@/styles/style-guide/breakpoint/breakpoint-mixins";
+@use "@/styles/style-guide/flex/flex.mixins";
+@use "@/styles/components/navigation/nav/nav.variables";
+
+.nav {
+    width: nav.$nav__width;
+
+    &__items {
+        list-style-type: none;
+
+        @include flex.flex(spacing.$spacing-2, column)
+    }
+}

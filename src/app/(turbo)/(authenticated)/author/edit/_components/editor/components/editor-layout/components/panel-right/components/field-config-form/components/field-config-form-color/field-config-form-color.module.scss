@@ -1,0 +1,10 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.field-config-form-color {
+    @include flex.flex(spacing.$spacing-2, row);
+
+    &__input {
+        width: 100%;
+    }
+}

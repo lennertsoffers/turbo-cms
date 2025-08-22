@@ -1,0 +1,101 @@
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/variables/radius/radius";
+@use "@/styles/style-guide/text/text";
+@use "@/styles/style-guide/icon/icon";
+@use "@/styles/style-guide/flex/flex";
+
+.link {
+    border: none;
+    border-radius: radius.$radius-2;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+
+    @include flex.flex(spacing.$spacing-2, row, spacing.$spacing-2, spacing.$spacing-2);
+
+    &--state {
+        &--disabled {
+            opacity: 0.7;
+            cursor: default;
+        }
+    }
+
+    &--color {
+        &--primary {
+            &.link--variant {
+                &--solid {
+                    background-color: var(--color__primary);
+                    color: var(--color__primary--text);
+                }
+
+                &--outline {    
+                    background-color: transparent;
+                    color: var(--color--text);
+                    border: 1px solid var(--color__primary);
+                }
+            }
+        }
+
+        &--red {
+            &.link--variant {
+                &--solid {
+                    background-color: var(--color__red);
+                    color: var(--color__primary--text);
+                }
+
+                &--outline {
+                    background-color: transparent;
+                    color: var(--color--text);
+                    border: 1px solid var(--color__red);
+                }
+            }
+        }
+    }
+
+    &--size {
+        &--sm {
+            span {
+                height: icon.$icon-height--s;
+            }
+            
+            &.link__icon {
+                & > svg {
+                    height: icon.$icon-height--s;
+                    width: icon.$icon-width--s;
+                }
+            }
+        }
+
+        &--md {
+            span {
+                height: icon.$icon-height--m;
+            }
+            
+            &.link__icon {
+                & > svg {
+                    height: icon.$icon-height--m;
+                    width: icon.$icon-width--m;
+                }
+            }
+        }
+
+        &--lg {
+            span {
+                height: icon.$icon-height--l;
+            }
+            
+            &.link__icon {
+                & > svg {
+                    height: icon.$icon-height--l;
+                    width: icon.$icon-width--l;
+                }
+            }
+        }
+    }
+
+    span {
+        @include text.capitalize-first-letter();
+    }
+}

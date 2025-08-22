@@ -1,0 +1,30 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.canvas-controls {
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+
+    @include flex.flex(spacing.$spacing-2, row, spacing.$spacing-0, spacing.$spacing-3);
+
+    &__device {
+        ul {
+            list-style-type: none;
+
+            @include flex.flex(spacing.$spacing-1, row);
+        }
+    }
+
+
+    &__zoom {
+        border-left: 1px solid var(--color__gray--normal);
+        border-right: 1px solid var(--color__gray--normal);
+
+        ul {
+            list-style-type: none;
+
+            @include flex.flex(spacing.$spacing-1, row, spacing.$spacing-2);
+        }
+    }
+}

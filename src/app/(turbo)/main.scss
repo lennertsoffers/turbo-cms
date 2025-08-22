@@ -1,0 +1,14 @@
+@use "@/styles/style-guide/color/color";
+@use "@/styles/style-guide/font/font";
+
+html, body {
+    height: 100%;
+    background-color: var(--color__background);
+    font-size: 16px;
+    line-height: normal;
+}
+
+* {
+    font-size: 16px;
+    font-family: "manrope";
+}

@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.field-config-form {
+    &__separator {
+        margin-bottom: spacing.$spacing-4;
+    }
+}

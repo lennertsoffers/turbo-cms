@@ -1,0 +1,8 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.component-selector {
+    &__components {
+        @include flex.flex(spacing.$spacing-2, column);
+    }
+}

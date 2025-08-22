@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate Files",
+            "type": "shell",
+            "command": "bun",
+            "args": [
+                ".vscode/scripts/generate-next-component.js",
+                "${input:environment}",
+                "${input:componentName}",
+                "${input:folderPath}",
+            ],
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "environment",
+            "type": "promptString",
+            "description": "Enter 'client' or 'server'"
+        },
+        {
+            "id": "componentName",
+            "type": "promptString",
+            "description": "Enter component name"
+        },
+        {
+            "id": "folderPath",
+            "type": "promptString",
+            "description": "The absolute path to the folder",
+        }
+    ]
+}

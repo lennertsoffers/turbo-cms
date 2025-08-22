@@ -1,0 +1,25 @@
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/variables/radius/radius";
+
+.media-selector {
+    &__fieldset {
+        display: flex;
+        gap: spacing.$spacing-3;
+        border: none;
+        top: 0;
+        position: sticky;
+        padding-bottom: spacing.$spacing-3;
+        background-color: #fff;
+    }
+
+    &__input {
+        flex: 1 1 auto;
+    }
+
+    &__medias {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: spacing.$spacing-3;
+    }
+}

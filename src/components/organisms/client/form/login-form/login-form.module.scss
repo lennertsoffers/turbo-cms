@@ -1,0 +1,30 @@
+@use "@/styles/style-guide/variables/spacing/spacing.variables";
+@use "@/styles/style-guide/variables/radius/radius.variables";
+@use "@/styles/style-guide/variables/font/font.variables";
+@use "@/styles/style-guide/flex/flex.mixins";
+
+.login-slaform {
+    width: 370px;
+
+    margin: 200px auto;
+    padding: spacing.$spacing-3;
+
+    background-color: #fff;
+    border: 1px solid var(--color__gray--normal);
+    border-radius: radius.$radius-3;
+
+    @include flex.flex(
+        spacing.$spacing-3,
+        column,
+        spacing.$spacing-4,
+        spacing.$spacing-4
+    );
+
+    &__submit {
+        text-align: center;
+    }
+
+    &__sign-up {
+        text-align: center;
+    }
+}

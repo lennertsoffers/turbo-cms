@@ -1,0 +1,17 @@
+@use "@/styles/style-guide/text/text";
+
+.tooltip {
+    &__content {
+        background-color: var(--color__primary);
+        color: var(--color__primary--text);
+        padding: spacing.$spacing-1 spacing.$spacing-2;
+        border-radius: radius.$radius-2;
+        font-size: smaller;
+
+        @include text.capitalize-first-letter();
+    }
+
+    &__arrow {
+        fill: var(--color__primary);
+    }
+}

@@ -1,0 +1,39 @@
+@use "@/styles/style-guide/icon/icon";
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/radius/radius";
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    transition: opacity 100ms ease-in-out;
+    width: icon.$icon-width--m;
+    min-height: 100%;
+    justify-content: center;
+
+    @include flex.flex(spacing.$spacing-0, column);
+
+    & > svg {
+        min-height: icon.$icon-height--m;
+        max-height: icon.$icon-height--m;
+        min-width: 100%;
+        display: block;
+        background-color: transparent;
+        transition: transform 50ms ease-in-out;
+        z-index: 0;
+
+        @include icon.icon-dimensions-s();
+
+        & > path {
+            stroke: var(--color__gray--normal);
+        }
+    }
+
+    &--open {
+        & > svg {
+            transform: rotateZ(90deg);
+        }
+    }
+}

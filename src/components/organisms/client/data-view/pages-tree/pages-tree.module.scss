@@ -1,0 +1,8 @@
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/flex/flex";
+
+.pages-tree {
+    list-style-type: none;
+
+    @include flex.flex(spacing.$spacing-0, column);
+}

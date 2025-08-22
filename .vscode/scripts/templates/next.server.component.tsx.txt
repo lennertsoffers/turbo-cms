@@ -1,0 +1,9 @@
+"use server";
+
+import styles from "./{{component}}.module.scss";
+
+type {{Component}}ComponentProps = {};
+
+export const {{Component}}Component = async ({}: {{Component}}ComponentProps) => {
+    return <div></div>;
+};

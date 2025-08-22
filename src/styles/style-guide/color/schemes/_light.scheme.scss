@@ -1,0 +1,16 @@
+@use "../../variables/color/light/light.variables";
+
+@mixin scheme-light() {
+    --color: #{light.$color__light};
+    --color--text: #{light.$color__light--text};
+
+    --color__primary: #{light.$color__light__primary};
+    --color__primary--text: #{light.$color__light__primary--text};
+
+    --color__danger: #{light.$color__light__danger};
+    --color__danger--text: #{light.$color__light__danger--text};
+
+    --color__gray--dark: #{light.$color__light__gray--dark};
+    --color__gray--normal: #{light.$color__light__gray--normal};
+    --color__gray--light: #{light.$color__light__gray--light};
+}

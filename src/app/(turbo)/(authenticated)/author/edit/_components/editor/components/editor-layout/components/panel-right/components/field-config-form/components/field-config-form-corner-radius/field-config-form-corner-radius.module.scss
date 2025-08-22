@@ -1,0 +1,35 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.field-config-form-corner-radius {
+    align-items: start;
+    @include flex.flex(spacing.$spacing-2, row);
+
+    &__inputs {
+        @include flex.flex-item(fill, hug);
+    }
+}
+
+.corner-radius {
+    &__all {
+        @include flex.flex(spacing.$spacing-2, row);
+
+        &__input {
+            @include flex.flex-item(fill, hug);
+        }
+    }
+
+    &__individual {
+        &__row {
+            @include flex.flex(spacing.$spacing-2, row);
+
+            & + & {
+                margin-top: spacing.$spacing-2;
+            }
+        }
+
+        &__input {
+            @include flex.flex-item(fill, hug);
+        }
+    }
+}

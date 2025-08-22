@@ -1,0 +1,9 @@
+@use "@/styles/style-guide/variables/font/font";
+@use "@/styles/style-guide/text/text";
+
+.field-label {
+    font-size: font.$font-sm;
+    display: block;
+
+    @include text.capitalize-first-letter();
+}

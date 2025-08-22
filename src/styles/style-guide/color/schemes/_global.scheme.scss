@@ -1,0 +1,11 @@
+@use "../../variables/color/global/global.variables";
+
+@mixin scheme-global() {
+    --color__green: #{global.$color__green};
+    --color__green--light: #{global.$color__green--light};
+    --color__green--pale: #{global.$color__green--pale};
+    --color__yellow: #{global.$color__yellow};
+    --color__yellow--pale: #{global.$color__yellow--pale};
+    --color__red: #{global.$color__red};
+    --color__red--pale: #{global.$color__red--pale};
+}

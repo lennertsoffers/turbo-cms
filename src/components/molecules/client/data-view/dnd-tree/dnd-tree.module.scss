@@ -1,0 +1,18 @@
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/flex/flex";
+
+.dnd-tree {
+    list-style-type: none;
+
+    @include flex.flex(spacing.$spacing-0, column);
+
+    &__element {
+        &--active {
+            opacity: 0.5;
+        }
+    }
+
+    &__drag-overlay {
+        cursor: grabbing;
+    }
+}

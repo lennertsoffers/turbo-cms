@@ -1,0 +1,24 @@
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+@use "../../../../../../../../../../../../../../../../../../styles/style-guide/variables/radius/radius";
+
+.field-config-form-spacing {
+    align-items: start;
+    @include flex.flex(spacing.$spacing-2, row);
+
+    &__inputs {
+        @include flex.flex-item(fill, hug);
+    }
+
+    &__row {
+        @include flex.flex(spacing.$spacing-2, row);
+
+        &__element {
+            @include flex.flex-item(fill, hug);
+        }
+
+        & + & {
+            margin-top: spacing.$spacing-2;
+        }
+    }
+}

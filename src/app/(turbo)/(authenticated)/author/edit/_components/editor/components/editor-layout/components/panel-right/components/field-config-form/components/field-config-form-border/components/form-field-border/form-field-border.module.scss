@@ -1,0 +1,64 @@
+@use "../../../../../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../../../../../styles/style-guide/icon/icon";
+@use "../../../../../../../../../../../../../../../../../../../../styles/style-guide/text/text";
+@use "../../../../../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+@use "../../../../../../../../../../../../../../../../../../../../styles/style-guide/variables/radius/radius";
+
+.form-field-border {
+    display: block;
+    border: 1px solid var(--color__gray--light);
+    border-radius: radius.$radius-2;
+    background-color: #fff;
+    align-items: center;
+
+    @include flex.flex(spacing.$spacing-1);
+
+    &:has(input:focus-visible), &:has(select:focus-visible) {
+        outline: 2px solid var(--color__primary);
+    }
+
+    &__element {
+        background-color: transparent;
+        margin: spacing.$spacing-2;
+        border: none;
+        outline: none;
+
+        @include flex.flex-item(fill, hug);
+
+        &:focus-visible {
+            margin-bottom: calc(spacing.$spacing-2 - 2px);
+            border-bottom: 2px solid var(--color__primary);
+        }
+    }
+
+    &__icon {
+        min-width: icon.$icon-height--s;
+        max-width: icon.$icon-height--s;
+        min-height: icon.$icon-height--s;
+        max-height: icon.$icon-height--s;
+        margin-left: spacing.$spacing-2;
+    }
+
+    &__separator {
+        min-width: 1px;
+        max-height: icon.$icon-height--s;
+
+        line {
+            stroke: var(--color__gray--light);
+        }
+    }
+
+    &__tooltip {
+        background-color: var(--color__primary);
+        color: var(--color__primary--text);
+        padding: spacing.$spacing-1 spacing.$spacing-2;
+        border-radius: radius.$radius-2;
+        font-size: smaller;
+
+        @include text.capitalize-first-letter();
+
+        &__arrow {
+            fill: var(--color__primary);
+        }
+    }
+}

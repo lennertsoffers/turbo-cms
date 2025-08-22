@@ -1,0 +1,53 @@
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/components/window/pane/pane";
+
+.pane {
+    @include flex.flex(spacing.$spacing-3, column, spacing.$spacing-3, spacing.$spacing-3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: var(--color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+
+    &--opening {
+        animation: open 250ms forwards ease-in-out;
+    }
+
+    &--open {
+        transform: translateX(0);
+    }
+
+    &--closing {
+        animation: close 250ms forwards ease-in-out;
+    }
+
+    &--closed {
+        transform: translateX(110%);
+    }
+
+    &__content {
+        max-height: 100%;
+        overflow: auto;
+    }
+
+    @keyframes open {
+        0% {
+            transform: translateX(110%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes close {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(110%);
+        }
+    }
+}

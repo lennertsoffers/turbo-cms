@@ -1,0 +1,87 @@
+@use "../../../../../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/icon/icon";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/text/text";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+@use "../../../../../../../../../../../../../../../../styles/style-guide/variables/radius/radius";
+
+.variables-config-form {
+    &__accordion {
+        border-radius: radius.$radius-2;
+        border: 1px solid var(--color__gray--normal);
+
+        &__item {
+            & + & {
+                border-top: 1px solid var(--color__gray--normal);
+            }
+        }
+
+        &__trigger {
+            width: 100%;
+            text-align-last: left;
+            justify-content: space-between;
+            background-color: transparent;
+            border: none;
+
+            @include flex.flex(spacing.$spacing-2, row, spacing.$spacing-2, spacing.$spacing-2);
+
+            &[data-state="open"] {
+                & > svg {
+                    transform: rotateZ(180deg);
+                }
+            }
+
+            * {
+                display: block;
+            }
+        }
+
+        &__content {
+            padding: 0 spacing.$spacing-2 spacing.$spacing-2 spacing.$spacing-2;
+        }
+    }
+
+    &__table {
+        &__header {
+            @include flex.flex(spacing.$spacing-2, row);
+
+            & > p {
+                @include flex.flex-item(fill, hug);
+            }
+        }
+    }
+
+    &__dropdown {
+        background-color: var(--color__primary);
+        color: var(--color__primary--text);
+        border-radius: radius.$radius-2;
+
+        @include flex.flex(spacing.$spacing-0, column, spacing.$spacing-2, spacing.$spacing-2);
+
+        &__item {
+            border-radius: radius.$radius-1;
+            outline: none;
+            align-items: center;
+            display: block;
+            cursor: pointer;
+
+            @include flex.flex(spacing.$spacing-1, row, spacing.$spacing-1, spacing.$spacing-1);
+
+            &[data-highlighted] {
+                background-color: var(--color__green);
+            }
+
+            &__icon {
+                max-height: icon.$icon-height--s;
+                max-width: icon.$icon-width--s;
+            }
+
+            & > span {
+                @include text.capitalize-first-letter();
+            }
+        }
+    }
+
+    &__arrow {
+        fill: var(--color__primary);
+    }
+}

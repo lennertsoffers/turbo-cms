@@ -1,0 +1,27 @@
+@use "@/styles/style-guide/icon/icon";
+@use "@/styles/style-guide/variables/spacing/spacing.variables";
+@use "@/styles/components/brand/head/head.variables";
+
+.head {
+    min-height: head.$head__height;
+    max-height: head.$head__height;
+    display: flex;
+    align-items: flex-start;
+    gap: spacing.$spacing-2;
+
+    @include icon.icon-container-dimensions-l;
+
+    &__logo {
+        display: block;
+    
+        @include icon.icon-dimensions-l;
+    }
+    
+    &__brand-name {
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: icon.$icon-height--l;
+    }
+    
+}

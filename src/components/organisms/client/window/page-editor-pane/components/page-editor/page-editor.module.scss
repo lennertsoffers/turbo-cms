@@ -1,0 +1,24 @@
+@use "@/styles/style-guide/text/text";
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/style-guide/variables/font/font";
+@use "@/styles/style-guide/variables/spacing/spacing";
+
+.page-editor {
+    @include flex.flex(spacing.$spacing-4, column);
+
+    &__title {
+        font-size: font.$font-h2;
+        font-weight: bold;
+        @include text.capitalize-first-letter();
+    }
+
+    &__section {
+        @include flex.flex(spacing.$spacing-3, column);
+
+        &__title {
+            font-size: font.$font-h4;
+            font-weight: bold;
+            @include text.capitalize-first-letter();
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use "../../../../../../../../../../../../styles/style-guide/flex/flex";
+@use "../../../../../../../../../../../../styles/style-guide/variables/spacing/spacing";
+
+.editor-layout {
+    &__panel {
+        background-color: var(--color__white);
+
+        &__content {
+            @include flex.flex(spacing.$spacing-0, column, spacing.$spacing-2, spacing.$spacing-2);
+        }
+    }
+
+    &__canvas {
+        background-color: #f9f9f9;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__left {
+        border-right: 1px solid var(--color__gray--normal);
+    }
+
+    &__right {
+        overflow: auto !important;
+        border-left: 1px solid var(--color__gray--normal);
+    }
+
+    &__handle {
+        z-index: 1;
+        outline-width: 0;
+        outline-color: var(--color__green);
+        outline-style: solid;
+        transition: outline-width 50ms ease-in-out;
+    }
+
+    [data-resize-handle-state=hover], [data-resize-handle-state=drag] {
+        outline-width: 2px;
+    }
+}

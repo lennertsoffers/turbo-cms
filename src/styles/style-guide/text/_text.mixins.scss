@@ -1,0 +1,15 @@
+@mixin capitalize-first-letter {
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+@mixin clamp($lines: 1) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,25 @@
+@use "@/styles/style-guide/variables/spacing/spacing";
+@use "@/styles/style-guide/flex/flex";
+@use "@/styles/components/page/console/console";
+
+.console {
+    height: 100%;
+
+    @include flex.flex(spacing.$spacing-5, row, spacing.$spacing-5, spacing.$spacing-5);
+
+    &__navigation {
+        width: console.$navigation__width;
+
+        @include flex.flex(0, column);
+
+        &__account {
+            justify-content: flex-end;
+            
+            @include flex.flex-item("hug", "fill");
+        }
+    }
+    
+    &__content {
+        flex: 1 1 auto;
+    }
+}
